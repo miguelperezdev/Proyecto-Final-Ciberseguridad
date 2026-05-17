@@ -1,0 +1,39 @@
+# ── Entorno virtual ──
+venv/
+.venv/
+env/
+ENV/
+
+# ── Base de datos (registros de interacciones) ──
+interactions.db
+*.db
+*.sqlite3
+
+# ── Variables de entorno (información sensible) ──
+.env
+.env.local
+.env.production
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── IDEs ──
+.idea/
+.vscode/
+*.iml
+
+# ── Sistema operativo ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs y temporales ──
+*.log
+*.tmp
