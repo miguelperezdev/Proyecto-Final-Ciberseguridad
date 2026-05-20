@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberDefense Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </svg>
+    <div>
+      <div class="logo-text">CyberDefense Assistant</div>
+      <div class="logo-sub">Proyecto Final · Ciberseguridad · Grupo 5</div>
+    </div>
+  </div>
+  <div class="status-dot" title="API conectada"></div>
+</header>
+
+<!-- TASK SELECTOR -->
+<div class="task-bar">
+  <button class="task-btn active" data-task="log_analysis">Análisis de Logs</button>
+  <button class="task-btn" data-task="alert_classification">Clasificación de Alertas</button>
+</div>
+
+<!-- MESSAGES -->
+<div id="messages">
+  <div class="msg system">
+    <div class="bubble">
+      // Asistente inicializado · Modelo: llama3.2 · Modo: defensivo<br>
+      // Selecciona una tarea arriba y escribe tu consulta.
+    </div>
+  </div>
+</div>
+
+<!-- INPUT -->
+<div class="input-area">
+  <div class="input-row">
+    <textarea
+      id="userInput"
+      placeholder="Pega aquí un log o describe una alerta de seguridad..."
+      rows="1"
+    ></textarea>
+    <button id="sendBtn">Enviar ↵</button>
+  </div>
+  <div class="char-count" id="charCount">0 / 1500</div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
